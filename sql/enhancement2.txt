@@ -1,0 +1,9 @@
+INSERT INTO `clients` (`clientFirstname`, `clientLastname`, `clientEmail`, `clientPassword`, `comments`) VALUES ('Tony', 'Stark', 'tony@starkent.com', 'Iam1ronM@n', 'I am the real Ironman');
+
+UPDATE `clients` SET `clientLevel` = 3 WHERE clientid = 1;
+
+UPDATE `inventory` SET `invName` = replace(`invName`, 'Nylon', 'Climbing'), `invDescription` = replace(`invDescription`, 'nylon rope', 'climbing rope') WHERE  `invId` = 15;
+
+SELECT `i`.`invName`, `c`.`categoryName` FROM `inventory` `i` INNER JOIN `categories` `c` ON `i`.`categoryId` = `c`.`categoryId` WHERE `categoryName` = 'Misc';
+
+DELETE FROM `inventory` WHERE `invid` = 7;
